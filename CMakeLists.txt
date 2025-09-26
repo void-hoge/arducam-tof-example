@@ -4,6 +4,8 @@ project(arducam-tof-example)
 
 find_package(ArducamDepthCamera REQUIRED)
 
-set(CXXLIBS ArducamDepthCamera::ArducamDepthCamera)
+add_executable(capture main.cpp)
 
-add_subdirectory(src)
+target_link_libraries(capture ArducamDepthCamera::ArducamDepthCamera)
+
+target_compile_options(capture PUBLIC -O3 -mtune=native -march=native)
