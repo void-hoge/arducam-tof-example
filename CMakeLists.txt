@@ -9,3 +9,10 @@ add_executable(capture main.cpp)
 target_link_libraries(capture ArducamDepthCamera::ArducamDepthCamera)
 
 target_compile_options(capture PUBLIC -O3 -mtune=native -march=native)
+
+
+add_executable(loadtest loadtest.cpp)
+
+target_link_libraries(loadtest ArducamDepthCamera::ArducamDepthCamera)
+
+target_compile_options(loadtest PUBLIC -O3 -mtune=native -march=native)
